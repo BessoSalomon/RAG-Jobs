@@ -45,3 +45,7 @@ It includes features such as buttons to toggle context sections and dynamic disp
 
 ### Contribute
 Contributions are welcome! Please submit pull requests or open issues to discuss changes you'd like to make.
+
+## THANKS
+Thank you to public resources such as ESCO, and Betterteam.
+MANY thanks to Interskillar allowing me to explore technical use-cases.
