@@ -17,28 +17,31 @@ OpenAI API Key (not displayed)
 
 # Detailed features
 ### Document processing and retrieval
-The load_chunks_from_json and load_chunks_from_jobs_json functions read and divide JSON documents into chunks to facilitate searching. The find_relevant_chunks function uses TF-IDF and cosine similarity to find the most relevant chunks based on the question.
+The load_chunks_from_json and load_chunks_from_jobs_json functions read and divide JSON documents into chunks to facilitate searching. 
+The find_relevant_chunks function uses TF-IDF and cosine similarity to find the most relevant chunks based on the question.
 
 ### Question augmentation and translation
-The chatbot uses the OpenAI GPT model to reformulate and enrich questions. The AugmentationChain class manages this process. In addition, a translation chain (TranslationChain) is used to translate questions and answers if necessary.
+The chatbot uses the OpenAI GPT model to reformulate and enrich questions. The AugmentationChain class manages this process. 
+In addition, a translation chain (TranslationChain) is used to translate questions and answers if necessary.
 
 ### Answer generation
 The chatbot generates detailed, structured answers using the contexts provided. The CombinedChain class combines initial answer generation and translation to provide complete answers.
 
 ### Endpoints API
-/ : Displays the user interface.
-/generate_chunks (POST): Generates relevant chunks from JSON documents for a given question.
-/answer_question (POST): Answers a question using the generated chunks and the GPT template.
+- / : Displays the user interface.
+- /generate_chunks (POST): Generates relevant chunks from JSON documents for a given question.
+- /answer_question (POST): Answers a question using the generated chunks and the GPT template.
 
 ### Example workflow
-The user submits a question via the user interface form.
-The backend uses augmentation_chain to reformulate the question.
-JSON documents are loaded and divided into chunks.
-The most relevant chunks are found using cosine similarity.
-A detailed answer is generated using the contexts of the chunks found.
+1. The user submits a question via the user interface form.
+2. The backend uses augmentation_chain to reformulate the question.
+3. JSON documents are loaded and divided into chunks.
+4. The most relevant chunks are found using cosine similarity.
+5. A detailed answer is generated using the contexts of the chunks found.
 
 ### User interface
-The user interface is built with HTML, CSS, and Bootstrap for a clean, responsive presentation. It includes features such as buttons to toggle context sections and dynamic displays of chunks and answers.
+The user interface is built with HTML, CSS, and Bootstrap for a clean, responsive presentation. 
+It includes features such as buttons to toggle context sections and dynamic displays of chunks and answers.
 
 ### Contribute
 Contributions are welcome! Please submit pull requests or open issues to discuss changes you'd like to make.
